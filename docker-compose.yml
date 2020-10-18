@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+  wichtel-app:
+    build: ./wichtel-app-backend
+    restart: always
+    container_name: wichtel-app-backend
+    networks:
+      - wichtel-app
+    ports:
+      - 3000:3000
+    environment:
+      - DB_HOST=wichtel-app-db
+      - ADMIN_FACEBOOK_ID=1
+    depends_on:
+      - wichtel-app-db
+
+  wichtel-app-db:
+    image: postgres
+    restart: always
+    container_name: wichtel-app-db
+    ports:
+      - 5432:5432
+    networks:
+      - wichtel-app
+    environment:
+      - POSTGRES_PASSWORD=wichtelapp
+
+networks:
+  wichtel-app:
