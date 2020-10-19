@@ -3,8 +3,16 @@ import { getRepository } from 'typeorm';
 import { User } from '../entities/user.entity';
 import { Lottery } from '../entities/lottery.entity';
 
+/**
+ * LotteryService
+ */
 @Injectable()
 export class LotteryService {
+  /**
+   * It starts the lottery
+   *
+   * An array of {@link User} will be randomized. Furthermore it iterates over the new array to map to a new {@link Lottery} entity.
+   */
   async startLottery() {
     let users: User[] = await getRepository(User).find();
     const randomSortedUsers: User[] = [];

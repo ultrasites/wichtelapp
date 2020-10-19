@@ -13,6 +13,9 @@ import { AppService } from '../app.service';
 import { IsPresenterDTO } from '../dto/isPresenterDTO';
 import { DeleteLotteryDTO } from '../dto/deleteLotteryDTO';
 
+/**
+ * LotteryController
+ */
 @Controller('lottery')
 export class LotteryController {
   constructor(

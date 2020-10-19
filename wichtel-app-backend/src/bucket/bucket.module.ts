@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { BucketController } from './bucket.controller';
 import { BucketService } from './bucket.service';
 
+/**
+ * BucketModule
+ */
 @Module({
   imports: [],
   controllers: [BucketController],

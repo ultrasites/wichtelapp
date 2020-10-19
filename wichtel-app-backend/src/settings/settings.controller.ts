@@ -3,6 +3,9 @@ import { Settings } from '../entities/settings.entity';
 import { SettingsService } from './settings.service';
 import { SettingsDTO } from '../dto/settingsDTO';
 
+/**
+ * SettingsController
+ */
 @Controller('settings')
 export class SettingsController {
   constructor(private readonly settingsService: SettingsService) {}
