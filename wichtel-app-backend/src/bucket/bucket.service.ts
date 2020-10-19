@@ -4,6 +4,9 @@ import { getRepository } from 'typeorm';
 import { CreateUserDTO } from '../dto/createUserDTO';
 import { DeleteUserDTO } from '../dto/deleteUserDTO';
 
+/**
+ * BucketService
+ */
 @Injectable()
 export class BucketService {
   async getAll(): Promise<User[]> {

@@ -4,6 +4,9 @@ import { User } from '../entities/user.entity';
 import { CreateUserDTO } from '../dto/createUserDTO';
 import { DeleteUserDTO } from '../dto/deleteUserDTO';
 
+/**
+ * BucketController
+ */
 @Controller('bucket')
 export class BucketController {
   constructor(private readonly bucketService: BucketService) {}

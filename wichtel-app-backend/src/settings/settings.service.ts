@@ -4,6 +4,9 @@ import { Settings } from '../entities/settings.entity';
 import { SettingsDTO } from '../dto/settingsDTO';
 import { SettingEventKey, SettingsKey } from './settings.utils';
 
+/**
+ * SettingsService
+ */
 @Injectable()
 export class SettingsService {
   async getAll(): Promise<Settings[]> {
@@ -20,6 +23,11 @@ export class SettingsService {
     }
   }
 
+  /**
+   * It maps a {@link SettingsDTO} to an {@link Settings} array
+   * @param settingsDTO
+   * @private
+   */
   _mapDTOtoSettings(settingsDTO: SettingsDTO): Settings[] {
     const settings: Settings[] = [];
 
